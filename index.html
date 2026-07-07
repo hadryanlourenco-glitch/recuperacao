@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>EcoHeroi</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="game-wrapper">
+  <div id="hud">
+    <div id="hud-left">
+      <div class="waste-row"><span class="wlabel">P Plastico</span><div class="mini-bar-wrap"><div class="mini-bar" id="bar-plastic"></div></div><span class="wnum" id="num-plastic">0/5</span></div>
+      <div class="waste-row"><span class="wlabel">M Metal</span><div class="mini-bar-wrap"><div class="mini-bar" id="bar-metal"></div></div><span class="wnum" id="num-metal">0/5</span></div>
+      <div class="waste-row"><span class="wlabel">O Organico</span><div class="mini-bar-wrap"><div class="mini-bar" id="bar-organic"></div></div><span class="wnum" id="num-organic">0/5</span></div>
+    </div>
+    <div id="hud-center">
+      <div class="hlabel">RESTAURACAO AMBIENTAL</div>
+      <div id="env-bar-wrap"><div id="env-bar"></div><span id="env-pct">15%</span></div>
+      <div id="score-line">Pontos: <span id="score">0</span></div>
+    </div>
+    <div id="hud-right">
+      <div class="hlabel">ENERGIA</div>
+      <div id="health-bar-wrap"><div id="health-bar"></div></div>
+      <div id="powerup-line">Power-up: <span id="active-pu">Nenhum</span></div>
+    </div>
+  </div>
+  <div id="boss-hud" class="hidden">
+    <span id="boss-title">BARAO DO DESPERDICIO</span>
+    <div id="boss-bar-wrap"><div id="boss-bar"></div></div>
+    <span id="boss-phase-label">Preparacao</span>
+  </div>
+  <canvas id="gc" width="800" height="420"></canvas>
+  <div id="controls-bar">Setas/WASD Mover | Espaco Pular | [E] Adubo | Clique no canvas p/ focar</div>
+  <div id="overlay">
+    <div id="overlay-box">
+      <div id="overlay-title">EcoHeroi</div>
+      <div id="overlay-msg">Producao Sustentavel</div>
+      <button id="start-btn">INICIAR</button>
+    </div>
+  </div>
+  <div id="toast" class="hidden"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
